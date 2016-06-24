@@ -32,10 +32,9 @@ var employeesList = [
 ];
 
 function showList() {
-    var myTable = '<table class = "table table-bordered" border="1"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
+    var myTable = '<table class = "table table-bordered" border="1"><tr><th>Vizualizare</th><th>Stergere</th><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
     for(var i in employeesList) {
-        myTable +=
-            '<tr><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td><td>'+employeesList[i].phone+
+        myTable += '<tr><td><button onclick="Visualisation()">Vizualizare</button></td><td><button onclick="Delete()">Stergere</button><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td><td>'+employeesList[i].phone+
             '</td><td>'+employeesList[i].salary+'</td></tr>';
     }
     myTable += '</table>';
